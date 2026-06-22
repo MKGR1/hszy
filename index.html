@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王子鸣 · 独立摄影师</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+  顶部导航栏
+  ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">王子鸣</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">首页</a>
+        <a href="#works" class="nav-link">作品</a>
+        <a href="#about" class="nav-link">关于</a>
+        <a href="#styles" class="nav-link">风格</a>
+        <a href="#contact" class="nav-link">联系</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+  首页 Hero
+  ============================================================ -->
+  <section id="home" class="section hero-section">
+    <div class="hero-content" data-reveal>
+      <div class="hero-tag">Independent Photographer</div>
+      <div class="hero-line"></div>
+      <h1>王子鸣</h1>
+      <div class="hero-line"></div>
+      <p class="hero-slogan">用镜头留住温柔 · 用光影记录瞬间</p>
+    </div>
+    <div class="scroll-hint" data-reveal>
+      <span>向下滚动</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+  作品合集
+  ============================================================ -->
+  <section id="works" class="section works-section">
+    <div class="section-content">
+      <div class="section-title" data-reveal>
+        <h2>作品合集</h2>
+        <p class="sub">Portfolio</p>
+      </div>
+
+      <!-- 分类筛选 -->
+      <div class="filter-bar" data-reveal>
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="design">设计</button>
+        <button class="filter-btn" data-filter="story">物语</button>
+        <button class="filter-btn" data-filter="visual">视觉</button>
+        <button class="filter-btn" data-filter="city">城市风光</button>
+        <button class="filter-btn" data-filter="still">静物</button>
+        <button class="filter-btn" data-filter="portrait">人像</button>
+      </div>
+
+      <!-- 作品网格（JS 动态渲染） -->
+      <div class="gallery-grid" id="galleryGrid" data-reveal></div>
+
+      <!-- 浏览全部 -->
+      <div class="more-wrap" data-reveal>
+        <button class="btn-more" id="btnViewAll">
+          <span>浏览全部作品</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+  关于我
+  ============================================================ -->
+  <section id="about" class="section about-section">
+    <div class="section-content">
+      <div class="section-title" data-reveal>
+        <h2>关于我</h2>
+        <p class="sub">About Me</p>
+      </div>
+      <div class="about-wrap">
+        <div class="about-card card" data-reveal>
+          <div class="about-label">About</div>
+          <h3>独立人文 / 风光 / 人像摄影师</h3>
+          <p>我是王子鸣，一名扎根于河南平顶山的独立摄影师。6 年的影像创作之路，让我愈发相信——好的照片不是炫技，而是记录下那些真实、温柔、有温度的瞬间。</p>
+          <p>我的镜头偏爱自然光、细腻的情绪、和光影交错时的那种静谧感。无论是人像写真、城市风光，还是静物与纪实，我都希望画面里有一种"安静的力量"——不喧哗，却自有声。</p>
+          <p><strong>个人理念：</strong>用镜头留住温柔，用光影记录瞬间。</p>
+        </div>
+        <div class="about-info-grid" data-reveal>
+          <div class="info-row"><span class="key">姓名</span><span class="val">王子鸣</span></div>
+          <div class="info-row"><span class="key">身份</span><span class="val">独立人文 / 风光 / 人像摄影师</span></div>
+          <div class="info-row"><span class="key">风格</span><span class="val">治愈、纪实、光影氛围感、简约高级</span></div>
+          <div class="info-row"><span class="key">从业</span><span class="val">6 年影像拍摄经验</span></div>
+          <div class="info-row"><span class="key">擅长</span><span class="val">人像写真 · 城市风光 · 情绪纪实 · 静物光影创作</span></div>
+          <div class="info-row"><span class="key">理念</span><span class="val">用镜头留住温柔，用光影记录瞬间</span></div>
+          <div class="info-row"><span class="key">地区</span><span class="val">中国 · 河南省 · 平顶山</span></div>
+          <div class="info-row"><span class="key">标签</span><span class="val">热爱生活 · 专注光影 · 长期持续创作</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+  拍摄风格
+  ============================================================ -->
+  <section id="styles" class="section styles-section">
+    <div class="section-content">
+      <div class="section-title" data-reveal>
+        <h2>拍摄风格</h2>
+        <p class="sub">My Style</p>
+      </div>
+      <div class="styles-grid">
+        <div class="style-card card" data-reveal>
+          <div class="style-icon">☀️</div>
+          <h3>治愈光影</h3>
+          <p>利用自然光的柔和过渡，捕捉温暖、安静的画面氛围。擅长逆光、黄金时刻，让每一帧都带有油画般的温柔质感。</p>
+        </div>
+        <div class="style-card card" data-reveal>
+          <div class="style-icon">🌿</div>
+          <h3>纪实叙事</h3>
+          <p>不打扰、不摆布，用镜头忠实地记录真实发生的情绪与故事。街头、日常、旅途——每个平凡瞬间都可以是一张好照片。</p>
+        </div>
+        <div class="style-card card" data-reveal>
+          <div class="style-icon">✨</div>
+          <h3>简约高级</h3>
+          <p>极简构图、低饱和色调、大面积留白，让画面主体自行说话。克制而有力，是光影创作中最高级的表达方式。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+  联系方式 & 预约表单
+  ============================================================ -->
+  <section id="contact" class="section contact-section">
+    <div class="section-content">
+      <div class="section-title" data-reveal>
+        <h2>联系方式</h2>
+        <p class="sub">Contact</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-info card" data-reveal>
+          <div class="contact-icon">✉️</div>
+          <h3>合作咨询</h3>
+          <p>如果你也相信影像的力量，<br>如果你也想为某个重要时刻留下一张有温度的照片——</p>
+          <p>欢迎与我联系，共同开启一次光影创作之旅。</p>
+          <p class="contact-email">📧 2337401504@qq.com</p>
+          <div class="cta-btn">拍摄预约 · 合作洽谈</div>
+          <div class="contact-tiny">可私信或留言，我会在 24 小时内回复</div>
+        </div>
+        <div class="contact-form-card card" data-reveal>
+          <h3>预约拍摄</h3>
+          <form id="bookingForm" novalidate>
+            <div class="form-group">
+              <input type="text" id="formName" placeholder="您的姓名 *" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="formEmail" placeholder="邮箱地址 *" required>
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="formPhone" placeholder="联系电话">
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="formMessage" rows="4" placeholder="拍摄需求 / 留言 *" required></textarea>
+              <span class="form-error"></span>
+            </div>
+            <button type="submit" class="form-submit">发送预约</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+  页脚
+  ============================================================ -->
+  <footer class="site-footer">
+    <p>© 2026 王子鸣 · 独立摄影师</p>
+  </footer>
+
+  <!-- ============================================================
+  图片弹窗（Lightbox）
+  ============================================================ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-btn lightbox-close" id="lbClose">✕</button>
+    <button class="lightbox-btn lightbox-prev" id="lbPrev">‹</button>
+    <div class="lightbox-viewport">
+      <img class="lightbox-img" id="lbImage" src="" alt="">
+      <div class="lightbox-caption" id="lbCaption"></div>
+    </div>
+    <button class="lightbox-btn lightbox-next" id="lbNext">›</button>
+    <div class="lightbox-counter" id="lbCounter"></div>
+    <div class="lightbox-dots" id="lbDots"></div>
+  </div>
+
+  <!-- ============================================================
+  返回顶部
+  ============================================================ -->
+  <button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
+
+  <!-- ============================================================
+  JavaScript
+  ============================================================ -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* =============================================================
+       数据定义
+       ============================================================= */
+
+    // =============================================================
+    // 全新图库 — 36 张高清免费商用摄影作品 (Unsplash)
+    // 6 大分类：设计 | 物语 | 视觉 | 城市风光 | 静物 | 人像
+    // "全部"展示 12 张（每类选 2 张），单分类展示全部 6 张
+    // =============================================================
+    const galleryData = [
+
+      // ===== ① 设计 (6张) =====
+      {
+        id: 'design-01', featured: true,
+        src: 'images/design-01.jpg',
+        category: 'design', title: '几何秩序',
+        desc: '玻璃幕墙在蓝天下切割出利落的几何线条，现代建筑的秩序之美在光影中无声绽放。每一根线条都经过精心计算，冷静而有力量。'
+      },
+      {
+        id: 'design-02',
+        src: 'images/design-02.jpg',
+        category: 'design', title: '创意空间',
+        desc: '阳光洒进开放式工作室，木色与白色交织出温暖而理性的创作氛围。每一个细节都是设计的语言，每一件器物都有它的位置。'
+      },
+      {
+        id: 'design-03',
+        src: 'images/design-03.jpg',
+        category: 'design', title: '极简构成',
+        desc: '黑白的极简画面中，结构与光影对话。去除多余的装饰后，最纯粹的形态得以显现——少即是多，克制是最高的审美。'
+      },
+      {
+        id: 'design-04', featured: true,
+        src: 'images/design-04.jpg',
+        category: 'design', title: '创作日常',
+        desc: '桌上摊开的工具与半成品，记录着一个想法从萌芽到成型的全过程。创意的诞生往往藏在这些看似凌乱的日常细节之中。'
+      },
+      {
+        id: 'design-05',
+        src: 'images/design-05.jpg',
+        category: 'design', title: '色彩游戏',
+        desc: '鲜艳的色块在画面中碰撞叠加，像一幅立体的绘画。色彩不仅是视觉的语言，更是情绪的表达，在交叠处生出新的可能性。'
+      },
+      {
+        id: 'design-06',
+        src: 'images/design-06.jpg',
+        category: 'design', title: '匠心手作',
+        desc: '指尖与材料的触碰，是设计最原始的起点。针线在布料上走过的痕迹，如同设计师在作品上留下的签名，细微而不可替代。'
+      },
+
+      // ===== ② 物语 (6张) =====
+      {
+        id: 'story-01', featured: true,
+        src: 'images/story-01.jpg',
+        category: 'story', title: '雾中行路',
+        desc: '晨雾弥漫的山间公路蜿蜒通向远方，两旁秋树金黄，空气中弥漫着湿润的草木香。这是一条通往未知的路，每一步都踏在诗意里。'
+      },
+      {
+        id: 'story-02',
+        src: 'images/story-02.jpg',
+        category: 'story', title: '巷弄深处',
+        desc: '窄巷深处，斑驳的墙面刻满岁月的纹路，晾晒的衣物在风中轻轻摆动。角落里的生活气息，是一座城市最真实的表情。'
+      },
+      {
+        id: 'story-03', featured: true,
+        src: 'images/story-03.jpg',
+        category: 'story', title: '铁轨远方',
+        desc: '两条平行的铁轨延伸向远方的地平线，路旁的野花在风中摇曳。旅行的意义不在终点，而在沿途的风景和出发时的那份心情。'
+      },
+      {
+        id: 'story-04',
+        src: 'images/story-04.jpg',
+        category: 'story', title: '静室暖光',
+        desc: '傍晚的房间被暖色的灯光填满，窗外天色渐暗，屋内一片安宁。一本书、一盏灯、一个安静的夜晚——这是生活赠予的温柔时刻。'
+      },
+      {
+        id: 'story-05',
+        src: 'images/story-05.jpg',
+        category: 'story', title: '人海微光',
+        desc: '万千人海中，音乐与欢呼在空气中共振。每个亮起的屏幕都是一座孤岛，陌生的灵魂在这一刻被同一种旋律连接在一起。'
+      },
+      {
+        id: 'story-06',
+        src: 'images/story-06.jpg',
+        category: 'story', title: '独自远行',
+        desc: '辽阔的海滩上，一个孤独的身影面朝大海。天地之间，人是如此渺小却又如此坚定。远行不是为了逃避，而是为了找到自己。'
+      },
+
+      // ===== ③ 视觉 (6张) =====
+      {
+        id: 'visual-01',
+        src: 'images/visual-01.jpg',
+        category: 'visual', title: '色彩光谱',
+        desc: '色彩的瀑布在画面中倾泻而下，冷暖交织，明暗交错。视觉的盛宴不需要具体的形状，纯粹的颜色本身就足以让人沉醉。'
+      },
+      {
+        id: 'visual-02', featured: true,
+        src: 'images/visual-02.jpg',
+        category: 'visual', title: '霓虹幻境',
+        desc: '霓虹光线在暗夜中编织出迷离的梦境，粉与紫的渐变如同城市不眠的呼吸。视觉在真实与虚幻之间游走，捕捉稍纵即逝的绚烂。'
+      },
+      {
+        id: 'visual-03',
+        src: 'images/visual-03.jpg',
+        category: 'visual', title: '倒映世界',
+        desc: '积水的地面倒映着天空与建筑的轮廓，虚实之间构成一幅超现实的画面。低头看去，另一个世界在水中静静展开。'
+      },
+      {
+        id: 'visual-04',
+        src: 'images/visual-04.jpg',
+        category: 'visual', title: '光之轨迹',
+        desc: '长曝光镜头下，车灯拖曳成流动的光线，像时间的画笔在黑夜中挥洒。光与速度交织，留下转瞬即逝的轨迹。'
+      },
+      {
+        id: 'visual-05', featured: true,
+        src: 'images/visual-05.jpg',
+        category: 'visual', title: '影的叙事',
+        desc: '阳光透过百叶窗在地面投下整齐的光影栅格，影子被拉长、切割、重组。没有实体的影子，本身就是光的诗篇。'
+      },
+      {
+        id: 'visual-06',
+        src: 'images/visual-06.jpg',
+        category: 'visual', title: '线条之诗',
+        desc: '交错的线条在二维平面上创造出三维的幻觉，几何的秩序中带着韵律的流动。视觉不仅是观看，更是一场智力的游戏。'
+      },
+
+      // ===== ④ 城市风光 (6张) =====
+      {
+        id: 'city-01', featured: true,
+        src: 'images/city-01.jpg',
+        category: 'city', title: '城市天际线',
+        desc: '摩天大楼在黄昏的天际线上次第排开，玻璃幕墙反射着夕阳的余晖。城市的脉搏在金色光影中缓缓跳动，繁华与宁静在这一刻达成了微妙的平衡。'
+      },
+      {
+        id: 'city-02',
+        src: 'images/city-02.jpg',
+        category: 'city', title: '都市森林',
+        desc: '高耸的建筑群在蓝天下形成利落的几何剪影，线条交错间是城市独有的韵律感。钢铁与玻璃构筑的森林里，每一扇窗后都亮着不同的故事。'
+      },
+      {
+        id: 'city-03',
+        src: 'images/city-03.jpg',
+        category: 'city', title: '暮色港湾',
+        desc: '落日将整片天空染成温柔的橙粉色，城市的倒影在平静的水面上轻轻摇曳。海与天的交界处，喧嚣在这一刻归于宁静，心也跟着沉静下来。'
+      },
+      {
+        id: 'city-04', featured: true,
+        src: 'images/city-04.jpg',
+        category: 'city', title: '万家灯火',
+        desc: '夜幕降临，城市的天际线被万千灯火点亮。星光与霓虹交相辉映，每一盏亮着的窗都是家的方向。黑暗中的光点，是这座城最温暖的注脚。'
+      },
+      {
+        id: 'city-05',
+        src: 'images/city-05.jpg',
+        category: 'city', title: '山川远眺',
+        desc: '远山在晨雾中若隐若现，层峦叠嶂之间透着静谧的蓝调。天边的云层被初升的太阳染上一抹金色，壮阔的自然画卷在眼前徐徐展开。'
+      },
+      {
+        id: 'city-06',
+        src: 'images/city-06.jpg',
+        category: 'city', title: '建筑韵律',
+        desc: '城市建筑的线条在光影交织中展现出几何的美感，曲线与直线在画面中对话。偶然经过的光影为冷峻的建筑注入了温度与生命力。'
+      },
+
+      // ===== ⑤ 静物 (6张) =====
+      {
+        id: 'still-01',
+        src: 'images/still-01.jpg',
+        category: 'still', title: '咖啡时光',
+        desc: '一杯热气腾腾的咖啡静置在木桌上，氤氲的香气在午后阳光中缓慢升腾。光斑落在杯沿，影子拉得很长，时间在这一刻放慢了脚步，安静而美好。'
+      },
+      {
+        id: 'still-02', featured: true,
+        src: 'images/still-02.jpg',
+        category: 'still', title: '花语呢喃',
+        desc: '柔和的晨光洒在花瓣上，半透明的质感如同丝绸般细腻。花朵在静默中舒展绽放，淡雅的色彩与柔和的光线交织，散发出安静而治愈的气息。'
+      },
+      {
+        id: 'still-03',
+        src: 'images/still-03.jpg',
+        category: 'still', title: '秋叶私语',
+        desc: '金黄的秋叶在逆光中脉络分明，每一道纹路都记录着季节更迭的故事。阳光穿透叶片，将其染成半透明的琥珀色，飘落的轨迹是风写给大地的信笺。'
+      },
+      {
+        id: 'still-04',
+        src: 'images/still-04.jpg',
+        category: 'still', title: '雨窗物语',
+        desc: '雨滴在玻璃窗上留下蜿蜒的痕迹，窗外的城市灯火透过水幕变得朦胧而温柔。虚实之间，光影交错，雨水模糊了视线却清晰了心境。'
+      },
+      {
+        id: 'still-05', featured: true,
+        src: 'images/still-05.jpg',
+        category: 'still', title: '阅读时光',
+        desc: '翻开书页的瞬间，纸张的油墨香与静谧的时光交织在一起。一束光恰好照亮了文字，尘埃在光束中缓慢飘浮，这是最奢侈的慢时光。'
+      },
+      {
+        id: 'still-06',
+        src: 'images/still-06.jpg',
+        category: 'still', title: '光影留白',
+        desc: '一扇窗、一束光、一片影——最简单的元素构成最动人的画面。克制的构图中自有高级感，留白处皆是想象的空间，安静的力量在光影中流淌。'
+      },
+
+      // ===== ⑥ 人像 (6张) — 放在最后 =====
+      {
+        id: 'portrait-01',
+        src: 'images/portrait-01.jpg',
+        category: 'portrait', title: '温柔凝视',
+        desc: '暖调光线轻柔地勾勒出脸庞的轮廓，目光沉静而温和，仿佛能透过镜头与观者对话。珍珠耳环在光影中微微泛光，整个画面弥漫着古典而优雅的氛围。'
+      },
+      {
+        id: 'portrait-02',
+        src: 'images/portrait-02.jpg',
+        category: 'portrait', title: '自然光 · 雀斑',
+        desc: '午后的窗边自然光轻柔地拂过面庞，雀斑在光线下显得生动而真实。没有刻意的修饰，每一处细节都在诉说独特的美——真实，就是最好的滤镜。'
+      },
+      {
+        id: 'portrait-03', featured: true,
+        src: 'images/portrait-03.jpg',
+        category: 'portrait', title: '逆光之吻',
+        desc: '逆光为发丝镀上一层金色的光晕，轮廓在明亮背景中显得格外柔和。光线穿过发梢的瞬间，连空气都变得温暖而梦幻，仿佛时间在这一刻凝固。'
+      },
+      {
+        id: 'portrait-04',
+        src: 'images/portrait-04.jpg',
+        category: 'portrait', title: '眼眸深处',
+        desc: '深邃的眼眸里藏着星辰大海，光线恰好照亮了瞳孔中的微光。安静的表情下有暗涌的情绪，这是一张有故事的脸，每一次凝视都有新的发现。'
+      },
+      {
+        id: 'portrait-05',
+        src: 'images/portrait-05.jpg',
+        category: 'portrait', title: '光影侧颜',
+        desc: '侧脸的轮廓在明暗交界处格外分明，一半隐入阴影，一半被光照亮。光影的切割如同内心世界的两面——沉思与坚定，在同一张脸上安静共存。'
+      },
+      {
+        id: 'portrait-06', featured: true,
+        src: 'images/portrait-06.jpg',
+        category: 'portrait', title: '街角 · 真实',
+        desc: '街头的自然光不加修饰，捕捉到最真实放松的状态。眼神中带着一丝不经意的深邃，随性的姿态里透出城市青年独有的气质与故事感。'
+      }
+    ];
+
+    /* =============================================================
+       1. 顶部导航 — 滚动渐变 & 高亮
+       ============================================================= */
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+    const hamburger = document.getElementById('hamburger');
+    const navLinksContainer = document.getElementById('navLinks');
+
+    // 导航滚动渐变
+    let lastScrollY = 0;
+    function handleNavScroll() {
+      const scrollY = window.scrollY;
+      navbar.classList.toggle('scrolled', scrollY > 60);
+      lastScrollY = scrollY;
+    }
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+
+    // 当前 section 高亮导航
+    function updateActiveLink() {
+      let current = 'home';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 150;
+        const bottom = top + sec.offsetHeight;
+        if (window.scrollY >= top && window.scrollY < bottom) {
+          current = sec.id;
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+    // 平滑滚动
+    navLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        // 移动端关闭菜单
+        navLinksContainer.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // 汉堡菜单
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('active');
+      navLinksContainer.classList.toggle('open');
+    });
+
+    // 点击外部关闭菜单
+    document.addEventListener('click', function (e) {
+      if (!navbar.contains(e.target) && navLinksContainer.classList.contains('open')) {
+        navLinksContainer.classList.remove('open');
+        hamburger.classList.remove('active');
+      }
+    });
+
+    /* =============================================================
+       2. 作品网格渲染 & 分类筛选
+       ============================================================= */
+    const grid = document.getElementById('galleryGrid');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    let currentFilter = 'all';
+    let currentItems = galleryData;  // 当前显示的列表（供 Lightbox 用）
+
+    function renderGallery(items) {
+      grid.innerHTML = '';
+      items.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'gallery-item';
+        div.style.setProperty('--delay', (idx % 6) * 0.06 + 's');
+        div.dataset.index = idx;
+        div.innerHTML =
+          '<img src="' + item.src + '" alt="' + item.title + '" loading="lazy">' +
+          '<div class="gallery-label">' +
+            '<div class="gallery-cat">' + { design: '设计美学', story: '物语叙事', visual: '视觉创作', city: '城市风光', still: '静物光影', portrait: '人像写真' }[item.category] + '</div>' +
+            '<div class="gallery-name">' + item.title + '</div>' +
+          '</div>';
+        // 点击缩略图 → 打开 Lightbox
+        div.addEventListener('click', function () {
+          openLightbox(currentItems, parseInt(this.dataset.index));
+        });
+        grid.appendChild(div);
+      });
+    }
+
+    function filterGallery(filter) {
+      currentFilter = filter;
+      if (filter === 'all') {
+        currentItems = galleryData.filter(function (item) { return item.featured; });
+      } else {
+        currentItems = galleryData.filter(function (item) { return item.category === filter; });
+      }
+      renderGallery(currentItems);
+
+      filterBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === filter);
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        filterGallery(this.dataset.filter);
+      });
+    });
+
+    // 初始渲染
+    filterGallery('all');
+
+    /* =============================================================
+       3. Lightbox 图片弹窗
+       ============================================================= */
+    const lightbox = document.getElementById('lightbox');
+    const lbImage = document.getElementById('lbImage');
+    const lbCaption = document.getElementById('lbCaption');
+    const lbCounter = document.getElementById('lbCounter');
+    const lbDots = document.getElementById('lbDots');
+    const lbClose = document.getElementById('lbClose');
+    const lbPrev = document.getElementById('lbPrev');
+    const lbNext = document.getElementById('lbNext');
+    let lbItems = [];
+    let lbIndex = 0;
+    let lbDotTimer = null;
+
+    function openLightbox(items, index) {
+      lbItems = items;
+      lbIndex = index;
+      renderDots();
+      showLightboxItem();
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function renderDots() {
+      lbDots.innerHTML = '';
+      lbDots.style.display = 'flex';
+      lbItems.forEach(function (_, i) {
+        var dot = document.createElement('button');
+        dot.className = 'lb-dot' + (i === lbIndex ? ' active' : '');
+        dot.dataset.index = i;
+        dot.addEventListener('mouseenter', function () {
+          goToLightbox(parseInt(this.dataset.index));
+        });
+        dot.addEventListener('click', function () {
+          goToLightbox(parseInt(this.dataset.index));
+        });
+        lbDots.appendChild(dot);
+      });
+    }
+
+    function updateDots() {
+      var dots = lbDots.querySelectorAll('.lb-dot');
+      dots.forEach(function (d, i) {
+        d.classList.toggle('active', i === lbIndex);
+      });
+    }
+
+    function showLightboxItem() {
+      var item = lbItems[lbIndex];
+      lbImage.src = item.src;
+      lbImage.alt = item.title || '';
+      if (item.title) {
+        lbCaption.innerHTML = '<span style="display:block;font-weight:400;letter-spacing:2px;margin-bottom:4px;">' + item.title + '</span>' + (item.desc || '');
+      } else {
+        lbCaption.textContent = item.desc || '';
+      }
+      lbCounter.textContent = (lbIndex + 1) + ' / ' + lbItems.length;
+      updateDots();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function goToLightbox(index) {
+      if (index < 0) index = 0;
+      if (index >= lbItems.length) index = lbItems.length - 1;
+      if (index === lbIndex) return;
+      lbIndex = index;
+      showLightboxItem();
+    }
+
+    function nextLightbox() {
+      goToLightbox(lbIndex + 1);
+    }
+    function prevLightbox() {
+      goToLightbox(lbIndex - 1);
+    }
+
+    // "浏览全部" → Lightbox 展示全部 18 张作品
+    document.getElementById('btnViewAll').addEventListener('click', function () {
+      openLightbox(galleryData, 0);
+    });
+
+    // 事件
+    lbClose.addEventListener('click', closeLightbox);
+    lbNext.addEventListener('click', nextLightbox);
+    lbPrev.addEventListener('click', prevLightbox);
+
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); nextLightbox(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prevLightbox(); }
+    });
+
+    // 轻触滑动
+    (function () {
+      let startX = 0, diffX = 0, dragging = false;
+      const vp = lightbox.querySelector('.lightbox-viewport');
+      vp.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX;
+        diffX = 0;
+        dragging = true;
+      }, { passive: true });
+      vp.addEventListener('touchmove', function (e) {
+        if (!dragging) return;
+        diffX = e.touches[0].clientX - startX;
+      }, { passive: true });
+      vp.addEventListener('touchend', function () {
+        if (!dragging) return;
+        dragging = false;
+        if (diffX < -50) nextLightbox();
+        else if (diffX > 50) prevLightbox();
+      }, { passive: true });
+    })();
+
+    /* =============================================================
+       4. 滚动淡入动画（Intersection Observer）
+       ============================================================= */
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => observer.observe(el));
+    } else {
+      // 降级：直接显示
+      revealEls.forEach(el => el.classList.add('revealed'));
+    }
+
+    /* =============================================================
+       5. 返回顶部
+       ============================================================= */
+    const backBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', function () {
+      backBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    backBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* =============================================================
+       6. 表单校验
+       ============================================================= */
+    const form = document.getElementById('bookingForm');
+    const nameInput = document.getElementById('formName');
+    const emailInput = document.getElementById('formEmail');
+    const msgInput = document.getElementById('formMessage');
+
+    function showError(input, msg) {
+      const group = input.closest('.form-group');
+      const errEl = group.querySelector('.form-error');
+      input.classList.add('error');
+      errEl.textContent = msg;
+    }
+
+    function clearError(input) {
+      const group = input.closest('.form-group');
+      const errEl = group.querySelector('.form-error');
+      input.classList.remove('error');
+      errEl.textContent = '';
+    }
+
+    function validateField(input) {
+      clearError(input);
+      if (input.hasAttribute('required') && !input.value.trim()) {
+        showError(input, '此项不能为空');
+        return false;
+      }
+      if (input.type === 'email' && input.value.trim()) {
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+          showError(input, '请输入有效邮箱');
+          return false;
+        }
+      }
+      return true;
+    }
+
+    nameInput.addEventListener('blur', function () { validateField(this); });
+    emailInput.addEventListener('blur', function () { validateField(this); });
+    msgInput.addEventListener('blur', function () { validateField(this); });
+
+    // 输入时清除错误
+    [nameInput, emailInput, msgInput].forEach(inp => {
+      inp.addEventListener('input', function () { clearError(this); });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const validName = validateField(nameInput);
+      const validEmail = validateField(emailInput);
+      const validMsg = validateField(msgInput);
+
+      if (validName && validEmail && validMsg) {
+        const btn = form.querySelector('.form-submit');
+        btn.textContent = '✓ 已发送';
+        btn.style.pointerEvents = 'none';
+        setTimeout(function () {
+          btn.textContent = '发送预约';
+          btn.style.pointerEvents = '';
+          form.reset();
+        }, 2500);
+      } else {
+        // 聚焦到第一个错误字段
+        [nameInput, emailInput, msgInput].some(inp => {
+          if (inp.classList.contains('error')) {
+            inp.focus();
+            return true;
+          }
+          return false;
+        });
+      }
+    });
+
+  })();
+  </script>
+</body>
+</html>
