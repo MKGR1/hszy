@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王子鸣 · 原创绘画师</title>
+  <meta name="description" content="王子鸣，原创绘画师，专注氛围感场景绘画与原创人物立绘创作。以线条为骨，以色彩为魂。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== 加载动画 ====== -->
+  <div class="loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-brush">🖌️</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+      <div class="loader-text" id="loaderText">正在绘制温柔宇宙...</div>
+      <div class="loader-status" id="loaderStatus">加载资源中</div>
+    </div>
+  </div>
+
+  <!-- ====== 深色模式切换 ====== -->
+  <button class="dark-toggle" id="darkToggle" aria-label="切换深色模式">
+    <span class="dark-sun">☀️</span>
+    <span class="dark-moon">🌙</span>
+  </button>
+
+  <!-- ====== 导航栏 ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">王子鸣<span class="nav-logo-dot">·</span><span class="nav-logo-sub">画</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">首页</a>
+        <a href="#about" class="nav-link">关于</a>
+        <a href="#works" class="nav-link">作品</a>
+        <a href="#philosophy" class="nav-link">理念</a>
+        <a href="#process" class="nav-link">流程</a>
+        <a href="#commission" class="nav-link">约稿</a>
+        <a href="#message" class="nav-link">寄语</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ====== Section 1: 首页全屏横幅 ====== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-circle hero-bg-circle-1"></div>
+      <div class="hero-bg-circle hero-bg-circle-2"></div>
+      <div class="hero-bg-circle hero-bg-circle-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-title-wrap" id="heroTitle">
+        <h1 class="hero-title" id="typeTitle">落笔生花，绘造温柔宇宙</h1>
+      </div>
+      <p class="hero-subtitle" data-delay="500">原创绘画师 · 王子鸣</p>
+      <p class="hero-desc" data-delay="1200">以线条为骨，以色彩为魂，在平凡世界里，绘制属于自己的浪漫温柔</p>
+      <div class="hero-actions" data-delay="1800">
+        <a href="#works" class="btn-primary">浏览作品</a>
+        <a href="#commission" class="btn-outline">约稿咨询</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>向下滚动</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ====== Section 2: 关于我 ====== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="sec-title" data-reveal>关于我</h2>
+      <p class="sec-subtitle" data-reveal>About Me</p>
+      <div class="about-wrap">
+        <div class="about-avatar" data-reveal>
+          <div class="about-avatar-img">
+            <img src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?w=500&q=80" alt="王子鸣绘画师" loading="lazy">
+          </div>
+          <div class="about-avatar-badge">✿ 原创绘画师</div>
+        </div>
+        <div class="about-text" data-reveal>
+          <p>我是<strong>王子鸣</strong>，一名专注氛围感场景绘画与原创人物立绘创作的画师。热爱温柔、有故事感的画面，擅长打造柔和光影、治愈色调与生动人物神态。</p>
+          <p>绘画于我而言，是记录生活、表达情绪的方式。我坚持原创，注重细节，希望笔下的画面能带给观者安静与治愈。</p>
+          <div class="about-tags">
+            <span class="about-tag">✧ 氛围感场景</span>
+            <span class="about-tag">✧ 人物立绘</span>
+            <span class="about-tag">✧ 治愈色调</span>
+            <span class="about-tag">✧ 原创手绘</span>
+            <span class="about-tag">✧ 光影氛围</span>
+            <span class="about-tag">✧ 故事感画面</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Section 3: 作品展示区 ====== -->
+  <section class="section works-section" id="works">
+    <div class="container">
+      <h2 class="sec-title" data-reveal>作品展示</h2>
+      <p class="sec-subtitle" data-reveal>Portfolio</p>
+
+      <!-- 分类介绍 -->
+      <div class="category-intro" data-reveal>
+        <div class="cat-tabs" id="catTabs">
+          <button class="cat-tab active" data-cat="ink">墨韵流芳 · 水墨</button>
+          <button class="cat-tab" data-cat="water">水色氤氲 · 水彩</button>
+          <button class="cat-tab" data-cat="oil">油彩华章 · 油画</button>
+          <button class="cat-tab" data-cat="powder">粉妆玉琢 · 粉彩</button>
+          <button class="cat-tab" data-cat="portrait">传神写照 · 肖像</button>
+          <button class="cat-tab" data-cat="landscape">山川揽胜 · 风景</button>
+        </div>
+        <div class="cat-desc" id="catDesc">
+          <p>墨韵流淌于纸面，浓淡干湿间尽显东方意境。以水墨为媒，晕染山川花鸟与人物神韵，在黑白之间抵达无限遐想。</p>
+        </div>
+      </div>
+
+      <!-- 作品筛选 -->
+      <div class="filter-bar" data-reveal>
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="ink">墨韵流芳</button>
+        <button class="filter-btn" data-filter="water">水色氤氲</button>
+        <button class="filter-btn" data-filter="oil">油彩华章</button>
+        <button class="filter-btn" data-filter="powder">粉妆玉琢</button>
+        <button class="filter-btn" data-filter="portrait">传神写照</button>
+        <button class="filter-btn" data-filter="landscape">山川揽胜</button>
+      </div>
+
+      <!-- 作品网格 -->
+      <div class="gallery-grid" id="galleryGrid" data-reveal></div>
+
+      <!-- 浏览全部 -->
+      <div class="more-wrap" data-reveal>
+        <button class="btn-more" id="btnViewAll">
+          <span>浏览全部作品</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Section 4: 创作理念 ====== -->
+  <section class="section philosophy-section" id="philosophy">
+    <div class="container">
+      <h2 class="sec-title" data-reveal>创作理念</h2>
+      <p class="sec-subtitle" data-reveal>My Philosophy</p>
+      <div class="philosophy-grid">
+        <div class="phil-card" data-reveal>
+          <div class="phil-icon">🌱</div>
+          <h3>忠于原创</h3>
+          <p>所有作品均为构思绘制，拒绝抄袭与模板套用。每一笔都源于内心的真实表达。</p>
+        </div>
+        <div class="phil-card" data-reveal>
+          <div class="phil-icon">💫</div>
+          <h3>重于情绪</h3>
+          <p>优先塑造画面氛围与故事感，让画作拥有温度。技术服务于情感，画面才能打动人心。</p>
+        </div>
+        <div class="phil-card" data-reveal>
+          <div class="phil-icon">✨</div>
+          <h3>细于细节</h3>
+          <p>打磨线条、色彩与光影，认真对待每一处画面细节。真正的质感藏在微小的笔触中。</p>
+        </div>
+        <div class="phil-card" data-reveal>
+          <div class="phil-icon">🕊️</div>
+          <h3>慢于热爱</h3>
+          <p>保持热忱与耐心，在绘画之路上稳步前行。不追逐速度，只在乎每一幅作品的质量。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Section 5: 创作流程 ====== -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <h2 class="sec-title" data-reveal>创作流程</h2>
+      <p class="sec-subtitle" data-reveal>一幅画的诞生</p>
+      <div class="process-carousel-wrap" data-reveal>
+        <button class="process-arrow process-prev" id="processPrev" aria-label="上一步">‹</button>
+        <div class="process-track-wrap">
+          <div class="process-track" id="processTrack">
+            <!-- 线稿 -->
+            <div class="process-card" data-step="01">
+              <div class="process-img">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80" alt="线稿阶段" loading="lazy" onerror="this.src='./images/dream-01.jpg'">
+              </div>
+              <div class="process-info">
+                <span class="process-step">01</span>
+                <h3>线稿阶段 <small>｜ 搭建骨架</small></h3>
+                <p>勾勒线条，确定构图与画面整体结构。每一根线条都在为后续的创作奠定基础。</p>
+              </div>
+            </div>
+            <!-- 铺色 -->
+            <div class="process-card" data-step="02">
+              <div class="process-img">
+                <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&q=80" alt="铺色阶段" loading="lazy" onerror="this.src='./images/dream-01.jpg'">
+              </div>
+              <div class="process-info">
+                <span class="process-step">02</span>
+                <h3>铺色阶段 <small>｜ 赋予温度</small></h3>
+                <p>区分色块，定下整体色调与情绪基调。色彩是画面最直接的情感语言。</p>
+              </div>
+            </div>
+            <!-- 细化 -->
+            <div class="process-card" data-step="03">
+              <div class="process-img">
+                <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600&q=80" alt="细化阶段" loading="lazy" onerror="this.src='./images/dream-01.jpg'">
+              </div>
+              <div class="process-info">
+                <span class="process-step">03</span>
+                <h3>细化阶段 <small>｜ 雕琢细节</small></h3>
+                <p>刻画质感、神态与装饰，让画面逐渐饱满。细节是作品从平凡到卓越的关键。</p>
+              </div>
+            </div>
+            <!-- 光影 -->
+            <div class="process-card" data-step="04">
+              <div class="process-img">
+                <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=600&q=80" alt="光影塑造" loading="lazy" onerror="this.src='./images/dream-01.jpg'">
+              </div>
+              <div class="process-info">
+                <span class="process-step">04</span>
+                <h3>光影塑造 <small>｜ 赋予灵魂</small></h3>
+                <p>调整明暗层次，烘托氛围，让画面立体生动。光影是赋予二维画面生命力的魔法。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="process-arrow process-next" id="processNext" aria-label="下一步">›</button>
+      </div>
+      <div class="process-dots" id="processDots"></div>
+    </div>
+  </section>
+
+  <!-- ====== Section 6: 约稿合作 ====== -->
+  <section class="section commission-section" id="commission">
+    <div class="container">
+      <h2 class="sec-title" data-reveal>约稿合作</h2>
+      <p class="sec-subtitle" data-reveal>Commission</p>
+      <div class="commission-grid">
+        <div class="comm-card" data-reveal>
+          <div class="comm-header comm-accept">
+            <span class="comm-icon">✅</span>
+            <h3>可接范围</h3>
+          </div>
+          <ul class="comm-list">
+            <li>原创头像</li>
+            <li>半身 / 全身人物立绘</li>
+            <li>氛围感场景绘画</li>
+            <li>OC 人设定制</li>
+            <li>纪念类绘画</li>
+          </ul>
+        </div>
+        <div class="comm-card" data-reveal>
+          <div class="comm-header comm-reject">
+            <span class="comm-icon">❌</span>
+            <h3>不接范围</h3>
+          </div>
+          <ul class="comm-list">
+            <li>拒绝临摹复刻</li>
+            <li>违规题材</li>
+            <li>纯倒卖商用</li>
+            <li>频繁修改需求的加急稿件</li>
+          </ul>
+        </div>
+        <div class="comm-card" data-reveal>
+          <div class="comm-header comm-flow">
+            <span class="comm-icon">📋</span>
+            <h3>创作流程</h3>
+          </div>
+          <ol class="comm-list comm-ol">
+            <li>沟通需求</li>
+            <li>草稿确认</li>
+            <li>大效果定稿</li>
+            <li>细节细化</li>
+            <li>交付高清成品</li>
+          </ol>
+        </div>
+        <div class="comm-card" data-reveal>
+          <div class="comm-header comm-copy">
+            <span class="comm-icon">©️</span>
+            <h3>版权说明</h3>
+          </div>
+          <ul class="comm-list">
+            <li>稿件仅供个人收藏使用</li>
+            <li>禁止二次售卖、商用</li>
+            <li>禁止篡改转载</li>
+            <li>本人享有作品展示权</li>
+          </ul>
+        </div>
+        <div class="comm-card comm-full" data-reveal>
+          <div class="comm-header comm-form">
+            <span class="comm-icon">✉️</span>
+            <h3>预约表单</h3>
+          </div>
+          <form class="comm-form-body" id="commissionForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="formName">您的姓名 <span class="form-required">*</span></label>
+                <input type="text" id="formName" class="form-input" required placeholder="怎么称呼您？">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formEmail">邮箱地址 <span class="form-required">*</span></label>
+                <input type="email" id="formEmail" class="form-input" required placeholder="用于回复联系">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="formType">约稿类型</label>
+              <select id="formType" class="form-input form-select">
+                <option value="">请选择约稿类型</option>
+                <option value="头像">头像</option>
+                <option value="立绘">立绘</option>
+                <option value="场景">场景</option>
+                <option value="其他">其他</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="formMessage">约稿需求 / 留言 <span class="form-required">*</span></label>
+              <textarea id="formMessage" class="form-input form-textarea" required placeholder="请描述您的需求…" rows="4"></textarea>
+            </div>
+            <p class="form-note">📮 留言后我会在24小时内回复</p>
+            <button type="submit" class="form-submit">发送预约</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Section 7: 互动寄语 ====== -->
+  <section class="section message-section" id="message">
+    <div class="container">
+      <div class="message-wrap" data-reveal>
+        <div class="message-quote-mark">"</div>
+        <p class="message-text">
+          画画是一场漫长且浪漫的修行，不求万丈光芒，但求温柔自愈。
+        </p>
+        <p class="message-text-sub">
+          感谢每一份喜爱，未来我会继续执笔前行。
+        </p>
+        <div class="message-author">—— 王子鸣</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 页脚 ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-main">© 2026 王子鸣 Art Studio</p>
+        <p class="footer-sub">原创手绘作品，未经授权禁止转载、商用、侵权。</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" title="B站">B站</a>
+          <a href="#" class="footer-social-link" title="小红书">小红书</a>
+          <a href="#" class="footer-social-link" title="LOFTER">LOFTER</a>
+          <a href="#" class="footer-social-link" title="微博">微博</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====== 回到顶部 ====== -->
+  <button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
+
+  <!-- ====== Lightbox 弹窗 ====== -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-bg"></div>
+    <button class="lb-btn lb-close" id="lbClose" aria-label="关闭">✕</button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="上一张">‹</button>
+    <button class="lb-btn lb-next" id="lbNext" aria-label="下一张">›</button>
+    <div class="lb-viewport">
+      <img class="lb-img" id="lbImage" src="" alt="">
+      <div class="lb-caption" id="lbCaption"></div>
+    </div>
+    <div class="lb-counter" id="lbCounter"></div>
+    <div class="lb-dots" id="lbDots"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
